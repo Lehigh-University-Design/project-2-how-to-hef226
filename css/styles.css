@@ -1,21 +1,77 @@
-/* styles.css */
-
-/* Global variables */
-
-:root {
-    
-}
-
-/* Main styles */
-
 body {
-
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #111;
 }
 
-h1 {
-
+header {
+  padding: 2rem;
+  text-align: center;
 }
 
-p {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* stays above content */
+}
 
+.navbar a {
+  margin-right: 1.5rem;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.navbar a:last-child {
+  margin-right: 0;
+}
+
+.nav-right {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin-left: 0;
+  padding: 2rem;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* spacing between steps */
+}
+
+.step {
+  border-bottom: 1px solid #ddd;
+}
+
+.sticky-image {
+  position: relative;
+}
+
+.sticky-image img {
+  position: sticky;
+  top: 12rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }

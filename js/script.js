@@ -1,3 +1,13 @@
-// Start JS script code, feel free to not use this or remove it
+const steps = document.querySelectorAll(".step");
+const backpackImage = document.getElementById("backpackImage");
 
-console.log("Hello, World!");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const newImg = entry.target.getAttribute("data-img");
+      backpackImage.src = "images/" + newImg;
+    }
+  });
+}, { threshold: 0.5 });
+
+steps.forEach(step => observer.observe(step));
