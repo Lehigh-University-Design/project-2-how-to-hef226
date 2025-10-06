@@ -9,7 +9,7 @@ const observer = new IntersectionObserver((entries) => {
       backpackImage.src = "./assets/" + newImg;
     }
   });
-}, { threshold: 0.5 }); // fires when half the element is visible
+}, { threshold: .8 }); // fires when half the element is visible
 
 // Observe each section
 steps.forEach(step => observer.observe(step));
