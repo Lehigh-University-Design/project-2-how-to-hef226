@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const newImg = entry.target.getAttribute("data-img");
-      backpackImage.src = "images/" + newImg;
+      backpackImage.src = "./assets/" + newImg;
     }
   });
 }, { threshold: 0.5 }); // fires when half the element is visible
