@@ -108,6 +108,21 @@ footer p {
 }
 
 
+.grid-alt-introduction { 
+  display: grid; 
+  grid-template-columns: 2fr 2fr; 
+  gap: 2rem; 
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 2rem; 
+} 
+
+.grid-alt-introduction img { 
+  width: 100%; 
+  height: auto; 
+} 
+
+
 .grid-alt-2 { 
   display: grid; 
   grid-template-columns: 2fr 2fr; 
