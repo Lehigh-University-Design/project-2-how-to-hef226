@@ -10,7 +10,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 } // triggers when about half the step is visible
+  { threshold: 0.8 } // triggers when about half the step is visible
 );
 
 steps.forEach((step) => observer.observe(step));
