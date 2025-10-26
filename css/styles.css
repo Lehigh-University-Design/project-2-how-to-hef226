@@ -1,111 +1,162 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   line-height: 1.5;
   background: #fff;
   color: #111;
+  font-family: "Special Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-header {
-  padding: 2rem;
-  text-align: center;
+.special-gothic-expanded-one-regular { 
+    font-family: "Special Gothic Expanded One", sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* stays above content */
-}
+.special-gothic-uniquifier { 
+  font-family: "Special Gothic", sans-serif; 
+  font-optical-sizing: auto; 
+  font-weight: 12px; 
+  font-style: normal; 
+  font-variation-settings: "wdth" 100; 
+} 
 
-.navbar a {
-  margin-right: 1.5rem;
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-}
+header { 
+  padding: 2rem; 
+  text-align: center; 
+} 
 
-.navbar a:last-child {
-  margin-right: 0;
-}
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem 2rem; 
+  border-bottom: 1px solid #ddd; 
+  background: #fff; 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; /* stays above content */ 
+} 
 
-.nav-right {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #555;
-}
+.navbar a { 
+  margin-right: 1.5rem; 
+  text-decoration: none; 
+  color: #111; 
+  font-weight: 500; 
+} 
 
-.grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin-left: 0;
-  padding: 2rem;
-}
+.navbar a:last-child { 
+  margin-right: 0; 
+} 
 
-.grid-alt {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin-left: 0;
-  padding: 2rem;
-}
+.nav-right { 
+  font-style: italic; 
+  font-size: 0.9rem; 
+  color: #555; 
+} 
 
-.grid-header {
-  display: grid;
+.grid { 
+  display: grid; 
+  grid-template-columns: 3fr 1fr; 
+  gap: 2rem; 
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 2rem; 
+} 
+
+.grid-alt { 
+  display: grid; 
+  grid-template-columns: 2fr 2fr; 
+  gap: 2rem; 
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 2rem; 
+} 
+
+.grid-header { 
+  display: grid; 
   grid-template-columns: 1fr 3fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin-left: 0;
-  padding: 2rem;
+  gap: 2rem; max-width: 1200px;
+  margin: auto; padding: 2rem; 
+} 
+
+.grid img { 
+  width: 100%; 
+  height: auto; 
+} 
+
+.grid-alt img { 
+  width: 100%; 
+  height: auto; 
+} 
+
+.grid-header img { 
+  width: 100%; 
+  height: auto; 
+} 
+
+.instructions { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6rem; /* spacing between steps */ 
+} 
+
+.step { 
+  border-bottom: 1px solid #ddd; 
+} 
+
+.sticky-image { 
+  position: relative; 
+} 
+
+.sticky-image img { 
+  position: sticky; 
+  top: 12rem; 
+  width: 100%; 
+  max-width: 400px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+  margin-top: 76px; 
+} 
+
+.introduction { 
+  display: flex; 
+  flex-direction: column; 
+} 
+
+.video-container { 
+  position: relative; 
+  padding-bottom: 56.25%; /* 16:9 ratio */ 
+  height: 0; 
+  overflow: hidden; 
+} 
+
+.video-container iframe { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  border: 6px; 
 }
 
-.grid img {
-  width: 100%;
-  height: auto;
-}
-
-.grid-alt img {
-  width: 100%;
-  height: auto;
-}
-
-.grid-header img {
-  width: 100%;
-  height: auto;
-}
-
-.instructions {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem; /* spacing between steps */
-}
-
-.step {
-  border-bottom: 1px solid #ddd;
-}
-
-.sticky-image {
-  position: relative;
-}
-
-.sticky-image img {
-  position: sticky;
-  top: 12rem;
-  width: 100%;
-  max-width: 400px;
+.trail-tip {
+  background: #ffffff;
+  border-left: 4px solid #000000;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin-top: 76px;
 }
 
-.introduction {
-  display: flex;
-  flex-direction: column;
+.trail-tip h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.trail-tip p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
