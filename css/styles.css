@@ -106,8 +106,7 @@ header {
   border-bottom: 1px solid #ddd; 
 } 
 
-.sticky-image { 
-  position: relative; 
+.sticky-image { position: relative; 
 } 
 
 .sticky-image img { 
@@ -117,7 +116,8 @@ header {
   max-width: 400px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
   margin-top: 76px; 
-} 
+}
+
 
 .introduction { 
   display: flex; 
