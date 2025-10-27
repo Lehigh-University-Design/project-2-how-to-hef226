@@ -43,7 +43,7 @@ header {
 .navbar a { 
   margin-right: 1.5rem; 
   text-decoration: none; 
-  color: #111; 
+  color: #000000; 
   font-weight: 500; 
 } 
 
@@ -52,7 +52,7 @@ header {
 } 
 
 .nav-right { 
-  font-style: italic; 
+  font-style: none; 
   font-size: 0.9rem; 
   color: #555; 
 } 
