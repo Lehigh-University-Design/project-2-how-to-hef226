@@ -147,3 +147,4 @@ bgModule.addEventListener("click", () => {
     bgText.style.opacity = 1;
   }, 200);
 });
+
