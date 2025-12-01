@@ -15,10 +15,6 @@ const observer = new IntersectionObserver(
 
 steps.forEach((step) => observer.observe(step));
 
-
-
-
-
 const slides = [
   {
     image: "../improv/Improv1.png",
@@ -147,4 +143,6 @@ bgModule.addEventListener("click", () => {
     bgText.style.opacity = 1;
   }, 200);
 });
+
+// ...existing code... (nav toggle removed)
 

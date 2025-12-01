@@ -246,3 +246,85 @@ footer p {
   align-items: center;
   justify-content: center;
 }
+
+
+/* Responsive: mobile-first tweaks */
+@media (max-width: 1024px) {
+  .grid, .grid-alt, .grid-alt-2, .grid-alt-introduction, .grid-header {
+    max-width: 900px;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+  .navbar { padding: 0.75rem 1rem; }
+}
+
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .nav-right { display: none; }
+
+  /* on mobile show nav-left by default (no hamburger) */
+  .nav-left { display: flex; width: 100%; flex-direction: column; gap: 0.5rem; }
+
+  .grid { grid-template-columns: 1fr; padding: 1rem; }
+  .grid-alt, .grid-alt-2, .grid-alt-introduction { grid-template-columns: 1fr; padding: 1rem; }
+  .grid img, .grid-alt img, .grid-alt-2 img { width: 100%; height: auto; }
+
+  .grid-header { grid-template-columns: 1fr; padding: 1rem; }
+
+  .stack { gap: 2rem; }
+
+  .bg-module { height: 60vh; }
+
+  /* make cards and modules full width */
+  .card, .trail-tip { margin: 0 0 1rem 0; width: 100%; }
+
+  /* reduce sticky image offset on small screens */
+  .sticky-image img { position: static; margin-top: 1rem; max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .panel-content h2 { font-size: 1.4rem; }
+  .panel-content p { font-size: 0.95rem; }
+  .bg-module { height: 45vh; }
+  .navbar a { font-size: 0.95rem; }
+
+  /* Typography tweaks to avoid overlap on small screens */
+  h1 { font-size: 1.6rem; line-height: 1.15; margin: 0.6rem 0; }
+  h2 { font-size: 1.2rem; line-height: 1.2; margin: 0.5rem 0; }
+  p { font-size: 0.95rem; line-height: 1.45; margin: 0.45rem 0; }
+  .grid img { max-height: 220px; object-fit: cover; }
+}
+
+/* Additional mobile typography at <=768 to reduce overlaps */
+@media (max-width: 768px) {
+  h1 { font-size: 1.9rem; line-height: 1.15; margin: 0.75rem 0; }
+  h2 { font-size: 1.3rem; line-height: 1.2; margin: 0.6rem 0; }
+  p { font-size: 1rem; line-height: 1.45; margin: 0.5rem 0; }
+  .grid img { max-height: 260px; object-fit: cover; }
+  .navbar { padding-bottom: 0.5rem; }
+  .grid { padding-top: 0.5rem; }
+  .sticky-image img { margin-top: 1rem; }
+}
+
+/* Neutralize large negative margins used on desktop for stacked grids */
+@media (max-width: 768px) {
+  .grid-alt p, .grid-alt-2 p {
+    margin-top: 0.5rem; /* replace -5em with a small positive gap on mobile */
+  }
+}
+
+/* Ensure headings keep 0.5em space above following paragraph on mobile */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    margin-bottom: 0.5em; /* space after heading */
+  }
+
+  /* Ensure paragraphs don't add extra top margin that collapses unpredictably */
+  h1 + p, h2 + p, h3 + p {
+    margin-top: 0; /* paragraph directly after heading */
+  }
+
+  /* Defensive: any paragraph with small top margin gets normalized */
+  p { margin-top: 0.25rem; }
+}
