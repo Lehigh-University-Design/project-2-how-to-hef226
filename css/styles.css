@@ -229,3 +229,23 @@ footer p {
 .arrow-link:hover {
   color: #515151;
 }
+
+
+
+
+.bg-module {
+  width: 100%;
+  aspect-ratio: 16 / 16;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: background-image 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
